@@ -2,6 +2,9 @@
  # Lines preceeded by # are regarded as comments and ignored
 ARG DEBIAN_FRONTEND=noninteractive
 
+# New TF2.4
+FROM tensorflow/tensorflow:2.4.1-gpu-jupyter
+
 # Identify the maintainer of an image
 LABEL maintainer="d.nankani@iitg.ac.in"
 LABEL version="0.1"
