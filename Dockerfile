@@ -1,6 +1,6 @@
 # Each instruction in this file generates a new layer that gets pushed to your local image cache
  # Lines preceeded by # are regarded as comments and ignored
-ARG DEBIAN_FRONTEND=noninteractive
+# ARG DEBIAN_FRONTEND=noninteractive
 
 # New TF2.4
 FROM tensorflow/tensorflow:2.4.1-gpu-jupyter
@@ -30,7 +30,7 @@ RUN pip3 --no-cache-dir install torch==1.4.0+cu100 torchvision==0.5.0+cu100 -f h
 RUN pip3 --no-cache-dir install torchvision torchsummary tb-nightly
 
 # Install locales
-# RUN apt-get install -y locales locales-all
-# ENV LC_ALL en_US.UTF-8
-# ENV LANG en_US.UTF-8
-# ENV LANGUAGE en_US.UTF-8
+RUN apt-get install -y locales locales-all
+ENV LC_ALL en_US.UTF-8
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US.UTF-8
