@@ -13,6 +13,8 @@ LABEL description="PyTorch + some other libraries"
 # Update the image to the latest packages
 RUN apt-get update
 
+RUN DEBIAN_FRONTEND="noninteractive" apt-get -y install tzdata
+
 RUN apt-get install -y wget vim htop fish datamash graphviz libgraphviz-dev
 
 RUN apt-get install -y libtiff5-dev libjpeg8-dev libopenjp2-7-dev zlib1g-dev \
