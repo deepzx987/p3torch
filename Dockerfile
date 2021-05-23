@@ -33,7 +33,8 @@ RUN pip3 --no-cache-dir install torchvision torchsummary tb-nightly
 
 # RUN pip3 --no-cache-dir install pytorch_ssim seaborn scikit-image
 
-RUN pip3 --no-cache-dir install seaborn scikit-image
+RUN pip3 --no-cache-dir install seaborn 
+RUN pip3 --no-cache-dir install scikit-image
 
 # Install locales
 RUN apt-get install -y locales locales-all
